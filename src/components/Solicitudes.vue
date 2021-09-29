@@ -17,7 +17,7 @@
                 <tr v-for="sol in this.solicitudes" :key="sol.idSolicitud">
                     <th scope="row">{{ sol.numero }}</th>
                     <td>{{ sol.tipo.descripcion }}</td>
-                    <td>Fondo {{ sol.fondo.numFondo }} - {{ sol.tipoValorCuotaparte.abreviatura }}</td>
+                    <td>Fondo {{ sol.fondo.numFondo }} - {{ sol.tipoValorCuotaparte.descripcion }}</td>
                     <td>{{ format_date(sol.fechaConcertacion) }}</td>
                     <td>{{ format_date(sol.fechaLiquidacion) }}</td>
                     <td>{{ sol.moneda.simbolo }}</td>

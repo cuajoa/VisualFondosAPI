@@ -19,7 +19,7 @@
                 <tr v-for="liq in this.liquidaciones" :key="liq.idLiquidacion">
                     <th scope="row">{{ liq.numero }}</th>
                     <td>{{ liq.tipo.descripcion }}</td>
-                    <td>Fondo {{ liq.fondo.numFondo }} - {{ liq.tipoValorCuotaparte.abreviatura }}</td>
+                    <td>Fondo {{ liq.fondo.numFondo }} - {{ liq.tipoValorCuotaparte.descripcion }}</td>
                     <td>{{ format_date(liq.fechaConcertacion) }}</td>
                     <td>{{ format_date(liq.fechaLiquidacion) }}</td>
                     <td>{{ liq.moneda.simbolo }}</td>
