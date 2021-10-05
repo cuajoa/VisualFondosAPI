@@ -7,12 +7,27 @@
       </router-link>
 
       <ul class="nav nav-pills">
-        <li class="nav-item"><router-link to="./solicitudes" class="nav-link">Solicitudes</router-link></li>
-        <li class="nav-item"><router-link to="./liquidaciones" class="nav-link">Liquidaciones</router-link></li>
-        <li class="nav-item"><router-link to="./posicion" class="nav-link">Posición Cuotapartista</router-link></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Consultivos</a>
+          <ul class="dropdown-menu">
+            <li><router-link to="./solicitudes" class="dropdown-item">Solicitudes</router-link></li>
+            <li><router-link to="./liquidaciones" class="dropdown-item">Liquidaciones</router-link></li>
+            <li><router-link to="./posicion" class="dropdown-item">Posición Cuotapartista</router-link></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Normativo Paraguay</a>
+          <ul class="dropdown-menu">
+            <li><router-link class="dropdown-item" to="./py/cartera">Composición de Cartera</router-link></li>
+            <li><router-link class="dropdown-item" to="./py/participes">Cantidad de Partícipes</router-link></li>
+            <li><router-link class="dropdown-item" to="./py/solicitudes">Solicitudes Diarias</router-link></li>
+            <li><router-link class="dropdown-item" to="./py/valorizacion">Valorización</router-link></li>
+          </ul>
+        </li>
         <li class="nav-item"><a href="https://github.com/cuajoa/VisualFondosAPI" class="nav-link" target="_blank"><i class="bi bi-github"></i></a></li>
-
       </ul>
+
+      
     </header>
  
   <router-view />
