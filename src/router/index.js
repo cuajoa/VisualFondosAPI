@@ -1,6 +1,7 @@
 import Solicitudes from '@/components/Solicitudes.vue'
 import Liquidaciones from '@/components/Liquidaciones.vue'
 import Posicion from '@/components/Posicion.vue'
+import ValoresCP from '@/components/ValoresCP.vue'
 import Home from '@/components/Home.vue'
 import Cartera from '@/components/PY/Cartera.vue'
 import Participes from '@/components/PY/Participes.vue'
@@ -12,6 +13,7 @@ const routes = [
   { path: '/liquidaciones', component: Liquidaciones, name:'Liquidaciones' },
   { path: '/solicitudes', component: Solicitudes, name:'Solicitudes' },
   { path: '/posicion', component: Posicion, name:'Posicion' },
+  { path: '/valorescp', component: ValoresCP, name:'ValoresCP' },
   { path: '/', component: Home, name:'Home' },
   { path: '/py/cartera', component: Cartera, name:'Cartera' },
   { path: '/py/participes', component: Participes, name:'Participes' },

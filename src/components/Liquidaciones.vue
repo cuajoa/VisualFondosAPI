@@ -41,7 +41,6 @@
             <li class="page-item"><a class="page-link" v-on:click="changePage(totalPages-1)">Ultima</a></li>
         </ul>
         </nav>
-
 </template>
 
 <script>
@@ -63,7 +62,7 @@ export default {
           }
   },
     methods: {
-    async getLiquidaciones() {
+    async getLiquidaciones(){
 
         const headers = {
                     'accept':'application/json;odata.metadata=minimal;odata.streaming=true',
@@ -71,19 +70,18 @@ export default {
                     'api-version': '2'
                 }
 
-            fetch("https://api.sistemasesco.com/api/fondos/v2/reportes/liquidaciones?fechaDesde=2017-04-01&fechaHasta=2017-05-01&pageSize=15&pageNumber="+ this.page, { headers })
-            .then(response => response.json())
-            .then(data => {
-                this.page = data.pageNumber,
-                this.hasPreviousPage = data.hasPreviousPage
-                this.hasNextPage = data.hasNextPage
-                this.nextPageNumber = data.nextPageNumber
-                this.pageSize = data.pageSize
-                this.previousPageNumber = data.previousPageNumber
-                this.totalPages = data.totalPages
-                this.totalItems = data.totalItems
-                this.liquidaciones = data.data
-            })
+            const response = await fetch("https://api.sistemasesco.com/api/fondos/v2/reportes/liquidaciones?fechaDesde=2017-04-01&fechaHasta=2017-05-01&pageSize=15&pageNumber="+ this.page, { headers })
+            const data = await response.json()
+            
+            this.page = data.pageNumber,
+            this.hasPreviousPage = data.hasPreviousPage
+            this.hasNextPage = data.hasNextPage
+            this.nextPageNumber = data.nextPageNumber
+            this.pageSize = data.pageSize
+            this.previousPageNumber = data.previousPageNumber
+            this.totalPages = data.totalPages
+            this.totalItems = data.totalItems
+            this.liquidaciones = data.data
             
             },
             changePage(page) {

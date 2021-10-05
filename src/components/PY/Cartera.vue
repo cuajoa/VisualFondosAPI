@@ -1,5 +1,7 @@
 <template>
- <div class="col-sm-4">
+ <div class="input-group mb-3" style="width:550px">
+    <label class="input-group-text" for="inputGroupSelect01">Fondo</label>
+
     <select v-model="selected" class="form-select" aria-label="Seleccione un fondo" @change="getCartera($event)">
         <option v-for="fondo in this.fondos" :key="fondo.numFondo" v-bind:value="fondo.numFondo">Fondo {{ fondo.numFondo }}</option>
     </select>

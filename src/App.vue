@@ -13,6 +13,7 @@
             <li><router-link to="./solicitudes" class="dropdown-item">Solicitudes</router-link></li>
             <li><router-link to="./liquidaciones" class="dropdown-item">Liquidaciones</router-link></li>
             <li><router-link to="./posicion" class="dropdown-item">Posición Cuotapartista</router-link></li>
+            <li><router-link to="./valorescp" class="dropdown-item">Valores de Cuotaparte</router-link></li>
           </ul>
         </li>
         <li class="nav-item dropdown">
