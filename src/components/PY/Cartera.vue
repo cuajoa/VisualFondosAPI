@@ -102,11 +102,11 @@ export default {
                 this.cartera = data.data
             })
         },
-            format_date(value){
+        format_date(value){
             if (value) {
                 return moment(String(value)).format('DD/MM/YYYY')
             }
-            }
+        }
     },
     created() {
         this.getFondos();         
